@@ -1,0 +1,124 @@
+body{
+    font-family: Lato;
+    font-size: 20px;
+    background-color: #1D1D2A;
+}
+#navbar{
+    display: flex;
+    background-color: #27293D;
+    width: 83rem;
+    height: 3rem;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+#nav-elem{
+    margin-left: 62rem;
+    display: flex;
+    color: white;
+    
+}
+#home-bar{
+    display: flex;
+    background-color: #27293D;
+    width: 83rem;
+    height: 3rem;
+    margin-top: 0.5em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+
+}
+#home-bar a{
+    text-decoration: none;
+    color: white;
+}
+#home-bar a:nth-child(n+2){
+
+    margin-left: 2em;
+}
+#home-bar img{
+    width: 1rem;
+    margin-top: 0.8em;
+    margin-left: 0.5em;
+}
+.rows{
+    display: flex;
+}
+#live-temp{
+    background-color: #27293D;
+    width: 57rem;
+    height: 30rem;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+
+}
+#sensor-list{
+    /* display: flex; */
+    background-color: #27293D;
+    width: 25rem;
+    height: 30rem;
+    margin-top: 1em;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    font-size: 1rem;
+    color: white;
+    font-weight: 400;
+
+}
+
+#sensor-table-heading{
+    position: relative;
+    top: 1rem;
+    left: 4rem;
+}
+#sensor-table-heading h4{
+    /* position: relative; */
+    margin-right: 8rem;
+}
+hr{
+    width: 77%;
+}
+#sensor-table{
+    display: flex;overflow-y:scroll;height: 15rem;
+}
+#sensor-table::-webkit-scrollbar{
+    display: none;
+}
+/* #sensor-table ul{
+    overflow-y:scroll;
+    height: 15rem;
+} */
+/* #sensor-table > ul::-webkit-scrollbar{
+    display: none;
+} */
+#alerts{
+        /* display: flex; */
+        background-color: #27293D;
+        width: 25rem;
+        height: 30rem;
+        margin-top: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        font-size: 1rem;
+        color: white;
+        font-weight: 400;
+    
+}
+#container1{
+        background-color: #27293D;
+        width: 57rem;
+        height: 25rem;
+        margin-top: 1em;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+        font-size: 1rem;
+        color: white;
+        font-weight: 400;
+}

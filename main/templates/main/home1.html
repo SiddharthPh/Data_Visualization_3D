@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../../static/main/css/style2.css" rel="stylesheet">
+    <script src="//d3js.org/d3.v4.min.js"></script>
+    <style>
+            .line {
+  fill: none;
+  stroke: #C778EA;
+  stroke-width: 2px;
+}
+.x-axis line{
+    stroke: #c4c4c4;
+    /* stroke-width: 0.075%; */
+}
+.x-axis path{
+    stroke:#c4c4c4;
+}
+.x-axis{
+    stroke: #c4c4c4;
+    stroke-width: 0.075%;
+}
+    </style>
+    <title>Xyma_Home</title>
+</head>
+<body>
+    <div id="navbar">
+        <div id="logo" style="margin-top: 0.5rem;margin-left: 0.2rem;">
+            <img src="../../static/main/images/logo.svg" style="width: 6rem;">
+        </div>
+        <div id="nav-elem">
+            <img id="search" src="../../static/main/images/search.png" style="width: 1.5rem; height: 1.5rem;margin-top: 0.6em;">
+            <img id="notification" src="../../static/main/images/notification.png" style="width: 2.5rem; height: 1.5rem;margin-left: 1.5em;margin-top: 0.6em;">
+            <span id="profile-name" style="font-size: 0.8rem; margin-top: 1.2em;margin-left: 1.5em;">ADMIN</span>
+            <img id="profile" src="../../static/main/images/profile.svg" style="margin-left: 0.5em;width: 3rem;">
+        </div>
+    </div>
+    <div id="home-bar">
+        <a href="#"><div class="group-icon" id="home">
+            <img src="../../static/main/images/home.svg">
+            <span>Home</span>
+        </div>
+        </a>
+        <a href="#">
+        <div class="group-icon" id="dashboard">
+            <img src="../../static/main/images/dashboard.svg">
+            <span style="position: relative;top: -0.45em;">Dashboard</span>
+        </div>
+        </a>
+        <a href="#">
+        <div class="group-icon" id="waveguide">
+            <img src="../../static/main/images/waveguide.svg" style="margin-top: 1.15em;">
+            <span>Waveguide</span>
+        </div>
+        </a>
+        <a href="#">
+        <div class="group-icon" id="report">
+            <img src="../../static/main/images/report.svg">
+            <span>Results</span>
+        </div>
+        </a>
+    </div>
+    <div class="rows">
+        <div id="sensor-list">
+            <h2 style="font-weight: 400;position:relative;left: 1rem;top: -0.1rem;">Sensor List</h2>
+            <div id="sensor-table-heading" style="display: flex;">
+                <h4>Waveguide-Id</h4>
+                <h4>Status</h4>
+            </div>
+            <hr>
+            <div id="sensor-table" >
+                <!-- For loop from django server -->
+                <ul style="list-style: none;margin-right: 10em;position: relative;left: 1.5em;">
+                    {% for id in sensorid %}
+                    <a href="#" style="text-decoration: none; color: white;"><li style="margin-bottom: 0.5em;">{{id}}</li></a>
+                    {% endfor %}
+                </ul>
+                <ul style="list-style: none;">
+                    {% for status in sensorstatus %}
+                    <li style="margin-bottom: 0.5em;">{{status}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <hr>
+            <a href="#" style="text-decoration: none; color: white;"><div id="sensor-table-footer" style="position: relative;left: 12rem; display: flex;top: 1rem;">
+                <span style="font-size: 1.5rem;margin-right: 1rem;">Complete List</span>
+                <img src="../../static/main/images/arrow.svg">
+            </div>
+            </a>
+        </div>
+        <div id="live-temp">
+            <h2 style="font-weight: 400;position:relative;left: 1rem;top: -0.2rem;display: flex;margin-bottom: 0rem;">Live Temperature<img src="../../static/main/images/livetemp.svg" style="margin-left:1rem"></h2>
+            <h4 style="font-weight: 400;position:relative;left: 1rem;top: -0.1rem;display: flex;margin-top:0rem">Yesterday's Temperature<span id="tempy">110</span><img src="../../static/main/images/celcius.svg"></h4>
+            <!-- <div id="svg-container" style="height:20rem;position: relative;top: 3rem;"> -->
+                <svg id="svg" width="750" height="400" style="position: relative;left:5rem;"></svg>
+            <!-- </div> -->
+        </div>
+    </div>
+    <div class="rows">
+       <div id="sensor-list" style="height: 25rem;">
+        <h2 style="font-weight: 400;position:relative;left: 1rem;top: -0.1rem;display: flex;">Alerts<img src="../../static/main/images/alerts.svg" style="width: 1.3rem;margin-left: 0.2em;"></h2>
+        <hr>
+            <div id="sensor-table" >
+                <!-- For loop from django server -->
+                <ul style="list-style: none;margin-right: 10em;position: relative;left: 1.5em;">
+                    {% for id in sensorid %}
+                    <a href="#" style="text-decoration: none; color: white;"><li style="margin-bottom: 0.5em;">{{id}}</li></a>
+                    {% endfor %}
+                </ul>
+                <ul style="list-style: none;">
+                    {% for status in sensorstatus %}
+                    <li style="margin-bottom: 0.5em;">{{status}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <hr>
+            <a href="#" style="text-decoration: none; color: white;"><div id="sensor-table-footer" style="position: relative;left: 12rem; display: flex;top: 1rem;">
+                <span style="font-size: 1.5rem;margin-right: 1rem;">See All</span>
+                <img src="../../static/main/images/arrow.svg">
+            </div>
+            </a>
+       </div>
+       <div id="container1">
+        <h2 style="font-weight: 400;position:relative;left: 1rem;top: -0.2rem;display: flex;margin-bottom: 0rem;">Sensor Readings<img src="../../static/main/images/livetemp.svg" style="margin-left:1rem"></h2>
+           <div id="container" style="margin-left: 8rem;margin-top: 1rem;">
+           </div>
+
+        </div>
+
+       </div>
+    </div>
+    <script type="module" src="../../static/main/js/cylinder.js"></script>
+    <script>
+        var svg = d3.select("#svg"),
+    margin = {top: 20, right: 5, bottom: 40, left: 20},
+    width = +svg.attr("width") - margin.left - margin.right,
+    height = +svg.attr("height") - margin.top - margin.bottom,
+    g = svg.append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    (function() {
+
+var n = 243,
+    duration = 750,
+    now = new Date(Date.now() - duration),
+    count = 0,
+    random = d3.randomNormal(0, .2);
+    data = d3.range(n).map(random);
+
+// var margin = {top: 6, right: 0, bottom: 20, left: 40},
+//     width = 960 - margin.right,
+//     height = 320 - margin.top - margin.bottom;
+
+var x = d3.scaleTime()
+    .domain([now - (n - 2) * duration, now - duration])
+    .range([0, width]);
+
+var y = d3.scaleLinear()
+    .domain([-1,1])
+    .range([height, 0]);
+
+var line = d3.line()
+    // .interpolate("basis")
+    .x(function(d, i) { return x(now - (n - 1 - i) * duration); })
+    .y(function(d, i) { return y(d); });
+
+
+svg.append("defs").append("clipPath")
+    .attr("id", "clip")
+  .append("rect")
+    .attr("width", width)
+    .attr("height", height);
+
+var axis = svg.append("g")
+    .attr("class", "x-axis")
+    .attr("transform", "translate(0," + height + ")")
+    .call(x.axis = d3.axisBottom().scale(x));
+
+var path = svg.append("g")
+    .attr("clip-path", "url(#clip)")
+  .append("path")
+    .datum(data)
+    .attr("class", "line");
+
+var transition = d3.select(this).transition()
+    .duration(750)
+    .ease(d3.easeLinear);
+
+// d3.select(window)
+//     .on("scroll", function() { ++count; });
+
+(function tick() {
+  transition = transition.each(function() {
+
+    // update the domains
+    now = new Date();
+    x.domain([now - (n - 2) * duration, now - duration]);
+    // y.domain([0, d3.max(data)]);
+
+    // push the accumulated count onto the back, and reset the count
+    // data.push(Math.min(30, count));
+    random = d3.randomNormal(0, .2);
+    data.push(d3.range(1).map(random))
+    // count = 0;
+
+    // redraw the line
+    svg.select(".line")
+        .attr("d", line)
+        .attr("transform", null);
+
+    // slide the x-axis left
+    axis.call(x.axis);
+
+    // slide the line left
+    path.transition()
+        .attr("transform", "translate(" + x(now - (n - 1) * duration) + ")");
+
+    // pop the old data point off the front
+    data.shift();
+
+  }).transition().on("start", tick);
+})();
+
+})();   
+    </script>
+</body>
+</html>

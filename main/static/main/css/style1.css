@@ -1,0 +1,85 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+
+#mySidenav{
+    height: 100%;
+    width: 3.1rem;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0px;
+    background-color: #1D1D2A; 
+    overflow: hidden; /* Disable horizontal scroll */
+    padding-top:0px; /* Place content 60px from the top */
+    transition: 0.5s;
+    margin-right: 1em; 
+}
+.sidenav a {
+    padding: 0.3em 0.3em 0.3em 0.5em;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 1.5rem;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+  }
+  /* .sidenav a:hover {
+    color: yellow;
+  } */
+  .sidenav a:first-child {
+    /* padding: 8px 8px 40px 10px; */
+    /* padding: 0.3em 0.3em 1.5em 0.6em;
+    text-decoration: none;
+    font-family: Lato;
+    font-size: 25px; */
+    color: #818181;
+    /* display: block;
+    transition: 0.3s; */
+  }
+
+
+  .sidenav a.active{
+    /* padding: 0px;
+    padding-bottom: 8px; */
+    display: flex;
+  }
+.sidenav a.deactive{
+  /* padding: 0px;
+  padding-bottom: 8px; */
+  display: flex;
+}
+.sidenav a.deactive .bi:last-child{
+    /* color: yellow; */
+    margin-inline: 1em;
+    color:#1D1D2A ;
+  }
+  .sidenav a.active .bi:first-child{
+    color: yellow;
+    /* padding-left: 8px; */
+  }
+  .sidenav a.active .bi:last-child{
+    /* color: yellow; */
+    margin-inline: 4px;
+  }
+
+  
+ 
+  .sidenav a:last-child {
+    /* padding-top: 9em; */
+    /* text-decoration: none;
+    font-family: Lato; */
+    /* font-size: 25px; */
+    color: #77ebff;
+    /* display: block;
+    transition: 0.3s; */
+  }
+#guid{
+  position: absolute;
+  left: 3px;
+  /* top:-10px */
+}
+#container{
+  width:500px;
+  height:500px
+}

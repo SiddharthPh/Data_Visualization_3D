@@ -1,0 +1,132 @@
+*,*::before, *::after{
+    box-sizing: border-box;
+}
+body{
+position: relative;
+width: max-width;
+height: 768px;
+overflow-y: scroll;
+
+background: #1D1D2A;
+
+/* position: absolute;
+width: 116px;
+height: 37px;
+left: 1188px;
+top: 23px; */
+
+
+}
+
+.nav-bar{
+position: absolute;
+width: 96%;
+height:50px;
+left: 2%;
+right: 2%;
+top:0% ;
+background-color: #27293D;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+line-height: 24px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #FFFFFF;
+
+}
+#nav img{
+    width:9.5%;
+    height:82%;
+}
+#nav-li{
+    position: absolute;
+    width: 30%;
+    height: 96%;
+    left: 65vw;
+    right: 2%;
+    top: 1%;
+    bottom: 1%;
+    /* background-color: #1D1D2A; */
+}
+#navli{
+    list-style: none;
+    width: 50%;
+    height: 10vh;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+}
+
+.home-bar{
+    position: absolute;
+    width: 96%;
+    height: 50px;
+    left: 2%;
+    right: 2%;
+    top:8% ;
+    background-color: #27293D;
+    font-family: Lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    /* display: inline-block; */
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    
+}
+#home-li{
+    position: absolute;
+    width: 800px;
+    height: 96%;
+    left: -1vw;
+    right: 2%;
+    top: 1%;
+    bottom: 1%;
+    padding: 0%;
+    margin: 0%;
+    /* list-style: none; */
+    /* white-space: nowrap; */
+    /* display: inline-block; */
+}
+#home-li li{
+    list-style: none;
+    text-align: center;
+    display: inline-flex;
+    vertical-align: middle;
+    /* border-right: 1px solid rgba(0, 0, 0, 0.3); */
+}
+#home-li li a{
+    text-decoration: none;
+    padding-right:70px;
+    display: inline-flex;
+    text-align: center;
+    /* vertical-align: middle; */
+}
+#home-li li a .Icon{
+    /* background-color: rosybrown; */
+    width: 120px;
+    height: auto;
+    display: inline-block;
+    color: white;
+    padding: 1px;
+    margin-top: 2vh;
+    margin-right: -23px;
+    /* vertical-align: middle; */
+}
+#home-li li a Span{
+    font-size: 15px;
+}
+
+#home-li li a .Icon .fa{
+    text-align:center;
+    /* font-size: 10; */
+    /* margin-top: 5vh; */
+}
+

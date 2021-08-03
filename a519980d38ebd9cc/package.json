@@ -1,0 +1,14 @@
+{
+  "name": "a519980d38ebd9cc",
+  "main": "a519980d38ebd9cc@288.js",
+  "version": "288.0.0",
+  "homepage": "https://observablehq.com/d/a519980d38ebd9cc",
+  "author": {
+    "name": "siddharthph",
+    "url": "https://observablehq.com/@siddharthph"
+  },
+  "type": "module",
+  "peerDependencies": {
+    "@observablehq/runtime": "4"
+  }
+}
