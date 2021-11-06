@@ -8,4 +8,4 @@ def homepage(request):
         'sensorstatus':list(df['Sensor_Status']),
     }
     print(list(df['SensorId']))
-    return render(request,"main/main.html",context)
+    return render(request,"main/home1.html",context)

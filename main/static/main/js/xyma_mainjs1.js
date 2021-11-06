@@ -32,10 +32,10 @@
 
 			function init() {
 
-				container = document.getElementById( 'col2' );
+				container = document.getElementById( 'container' );
 
 				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xffffff );
+				scene.background = new THREE.Color( 0xeeeeee);
 
 				uiScene = new THREE.Scene();
 				group=new THREE.Group();
@@ -149,7 +149,7 @@
 				// labelRenderer.clear();
 				renderer.render( scene, perpCamera );
 				renderer.render( uiScene, orthoCamera );
-				labelRenderer.render( uiScene, orthoCamera );
+				// labelRenderer.render( uiScene, orthoCamera );
                 earthDiv.textContent=String(maxtemp)
                 moonDiv.textContent=String(mintemp)
 
