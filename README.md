@@ -26,9 +26,9 @@ And a 3-D model with live color coding as shown.
 ![image](https://github.com/SiddharthPh/Xyma_Git/blob/master/images/Screenshot%20from%202021-07-31%2011-41-17.png)
 ## My Overall contributions
 1.Designed UI of the IoT dashboard
-2. Images of the designs are given below:
 - ![image](https://github.com/SiddharthPh/Xyma_Git/blob/master/images/Screenshot%20from%202021-05-07%2020-23-15.png)
 - ![image](https://github.com/SiddharthPh/Xyma_Git/blob/master/images/Screenshot%20from%202021-05-12%2001-11-04.png)
 - ![image](https://github.com/SiddharthPh/Xyma_Git/blob/master/images/Screenshot%20from%202021-05-12%2001-11-14.png)
 - ![image](https://github.com/SiddharthPh/Xyma_Git/blob/master/images/Screenshot%20from%202021-05-12%2001-14-41.png)
+2. 3-D Visualization of data, rendering on web browsers.
 
