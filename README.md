@@ -2,7 +2,7 @@
 ## Project Description.
 This repo's focus is on visualising data on 3-D models, which shall be rendered on web browsers.
 In this project, we have used data from a temperature sensor, and color coded the 3-D model.
-## Pre Requisites:
+## PreRequisites:
 Make a 3-D model that renders a glb or gltf extension file. I have used Blender to generate the model as per requirements.
 Instructions to make the model is mentioned below.
 ### 3-D model.
