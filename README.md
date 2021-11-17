@@ -1,4 +1,4 @@
-# XYMA_GIT
+# Data Visualization on 3D models
 ## Project Description.
 This repo's focus is on visualising data on 3-D models, which shall be rendered on web browsers.
 In this project, we have used data from a temperature sensor, and color coded the 3-D model.
